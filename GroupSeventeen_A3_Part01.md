@@ -6,8 +6,12 @@
 
 This returns a list of wallets for the provided user. Provides the walletid, cryptocurrency type (e.g. Bitcoin), and amount stored for each wallet in that user's account.
 
-**Parameters:** 
-> * userid: Uniquely identifies the user.
+**Parameters:**
+
+>| Parameter | Type   | Description                          | Required |
+>|-----------|--------|--------------------------------------|----------|
+>| userid    | String | Uniquely identifies the user.        | Yes      |
+
 
 **Example Usage**:
 ```
@@ -44,10 +48,13 @@ GET /users/user12bs/wallets
 This provides a list of transactions for the provided user from the specified wallet. The time period for the transactions can be set using the optional parameters. If no parameters are provided, the transactions for the current date will be returned.
 
 **Parameters**:
-> * userid: Uniquely identifies the user.
-> * walledid: Uniquely identifies the wallet. Obtained from endpoint 1 response.
-> * startdate: The starting date for the transaction period, given as a string in MM-DD-YYYY format. Must be earlier than or the same as the end date parameter. If not included, will default to the current date.
-> * enddate: The ending date for the transaction period, given as a string in MM-DD-YYYY format. Must be later than or the same as the start date parameter. If not included, will default to the current date.
+
+>| Parameter | Type   | Description                          | Required |
+>|-----------|--------|--------------------------------------|----------|
+>| userid    | String | Uniquely identifies the user.        | Yes      |
+>| walletid  | String | Uniquely identifies the wallet. Obtained from endpoint 1 response. | Yes |
+>| startdate | String | The starting date for the transaction period, given in MM-DD-YYYY format. Must be earlier than or the same as the end date parameter. If not included, will default to the current date. | No |
+>| enddate | String | The ending date for the transaction period, given in MM-DD-YYYY format. Must be later than or the same as the start date parameter. If not included, will default to the current date. | No |
 
 **Example Usage**:
 ```
@@ -61,8 +68,7 @@ GET /users/user12bs/wallets/wallet9sh/transactions?startdate=01-01-2024&enddate=
 > * type: the type of transaction, either "sent" or "received"
 > * timestamp: the timestamp of when the transaction occurred
 > * amount: the amount of the transaction
-> * recipient: the recipient of the transaction amount, only provided if the transaction type is "sent"
-> * sender: the sender of the transaction amount, only provided if the transaction type is "received"
+> * otherparty: the recipient or sender of the transaction amount
 
 **Example Resource:**
 ```json
@@ -74,8 +80,7 @@ GET /users/user12bs/wallets/wallet9sh/transactions?startdate=01-01-2024&enddate=
             "type": "received",
             "timestamp": "1679407200",
             "amount": 102400,
-            "recipient": "abc",
-            "sender": "def"
+            "otherparty": "Bob",
         }
     ]
 }
