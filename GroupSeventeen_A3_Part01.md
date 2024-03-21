@@ -77,7 +77,9 @@ Returns JSON with the following fields:
 | timestamp | String | The timestamp of when the transaction occurred. | 
 | amount | Number | The amount of the transaction. |
 | otherParty | String | The recipient or sender of the transaction amount. |
+
 **Example Resource:**
+
 ```json
 {
     "startdate": "01-01-2022",
