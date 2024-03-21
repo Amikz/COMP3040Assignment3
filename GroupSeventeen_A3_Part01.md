@@ -9,6 +9,11 @@ This returns a list of wallets for the provided user. Provides the walletid, cry
 **Parameters:** 
 > * userid: Uniquely identifies the user.
 
+**Example Usage**:
+```
+GET /users/user12bs/wallets
+```
+
 **Resource:**
 >Returns JSON with the following fields:
 >* wallets: the list of wallets
@@ -44,6 +49,10 @@ This provides a list of transactions for the provided user from the specified wa
 > * startdate: The starting date for the transaction period, given as a string in MM-DD-YYYY format. Must be earlier than or the same as the end date parameter. If not included, will default to the current date.
 > * enddate: The ending date for the transaction period, given as a string in MM-DD-YYYY format. Must be later than or the same as the start date parameter. If not included, will default to the current date.
 
+**Example Usage**:
+```
+GET /users/user12bs/wallets/wallet9sh/transactions?startdate=01-01-2024&enddate=01-01-2024
+```
 **Resource:**
 > Returns JSON with the following fields:
 > * startdate: the start date of the transaction period
@@ -62,11 +71,11 @@ This provides a list of transactions for the provided user from the specified wa
     "enddate": "03-03-2024",
     "transactions": [
         {
-            "type": "",
-            "timestamp": "",
-            "amount": 0,
-            "recipient": "",
-            "sender": ""
+            "type": "received",
+            "timestamp": "1679407200",
+            "amount": 102400,
+            "recipient": "abc",
+            "sender": "def"
         }
     ]
 }
