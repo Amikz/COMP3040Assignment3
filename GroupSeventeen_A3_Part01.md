@@ -73,7 +73,7 @@ Returns JSON with the following fields:
 | startDate | String | The start date of the transaction period, in MM-DD-YYYY format. |
 | endDate | String | The end date of the transaction period, in MM-DD-YYYY format. |
 | transactions | Array | The list of transactions within the given transaction period. |
-| type | String | The type of transaction, either "sent" or "received". |
+| type | String | The type of transaction, either `sent` or `received`. |
 | timestamp | String | The timestamp of when the transaction occurred. | 
 | amount | Number | The amount of the transaction. |
 | otherParty | String | The recipient or sender of the transaction amount. |
