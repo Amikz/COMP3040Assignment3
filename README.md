@@ -1,5 +1,7 @@
 ## Description
 
+The Crypto Wallet Management API offers comprehensive insights and management tools for cryptocurrency wallets associated with a user's account. This API enables users to view the balance and cryptocurrency type in each of their wallets, as well as access detailed transaction histories within specific date ranges. It is designed to cater to the needs of cryptocurrency enthusiasts and investors who require a detailed overview of their digital assets across different wallets.
+
 ## Endpoints
 
 ### 1. GET /users/{userid}/wallets
