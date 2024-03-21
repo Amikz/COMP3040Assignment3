@@ -10,7 +10,7 @@ This returns a list of wallets for the provided user. Provides the walletid, cry
 
 | Parameter | Type   | Description                          | Required |
 |-----------|--------|--------------------------------------|----------|
-| userID    | String | Uniquely identifies the user.        | Yes      |
+| userid    | String | Uniquely identifies the user.        | Yes      |
 
 
 **Example Usage**:
@@ -55,10 +55,10 @@ This provides a list of transactions for the provided user from the specified wa
 
 | Parameter | Type   | Description                          | Required |
 |-----------|--------|--------------------------------------|----------|
-| userID    | String | Uniquely identifies the user.        | Yes      |
-| walletID  | String | Uniquely identifies the wallet. Obtained from endpoint 1 response. | Yes |
-| startDate | String | The starting date for the transaction period, given in MM-DD-YYYY format. Must be earlier than or the same as the end date parameter. If not included, will default to the current date. | No |
-| endDate | String | The ending date for the transaction period, given in MM-DD-YYYY format. Must be later than or the same as the start date parameter. If not included, will default to the current date. | No |
+| userid    | String | Uniquely identifies the user.        | Yes      |
+| walletid  | String | Uniquely identifies the wallet. Obtained from endpoint 1 response. | Yes |
+| startdate | String | The starting date for the transaction period, given in MM-DD-YYYY format. Must be earlier than or the same as the end date parameter. If not included, will default to the current date. | No |
+| enddate | String | The ending date for the transaction period, given in MM-DD-YYYY format. Must be later than or the same as the start date parameter. If not included, will default to the current date. | No |
 
 **Example Usage**:
 ```
