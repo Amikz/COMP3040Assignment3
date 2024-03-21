@@ -19,11 +19,15 @@ GET /users/user12bs/wallets
 ```
 
 **Resource:**
->Returns JSON with the following fields:
->* wallets: the list of wallets
->* walletid: the ID of a wallet
->* cryptocurrency: the type of cryptocurrency stored in a wallet, e.g. BTC, ETH
->* balance: the amount of currency stored in a wallet
+
+Returns JSON with the following fields:
+
+>| Resource       | Type   | Description          |
+>|----------------|--------|----------------------|
+>| wallets        | Array  | The list of wallets. |
+>| walletID       | String | The ID of a wallet.  |
+>| cryptocurrency | String | The type of cryptocurrency stored in a wallet, e.g. BTC, ETH. |
+>| balance        | Number | The amount of currency stored in a wallet. |
 
 **Example Resource:**
 ```json
@@ -61,15 +65,18 @@ This provides a list of transactions for the provided user from the specified wa
 GET /users/user12bs/wallets/wallet9sh/transactions?startdate=01-01-2024&enddate=01-01-2024
 ```
 **Resource:**
-> Returns JSON with the following fields:
-> * startdate: the start date of the transaction period
-> * enddate: the end date of the transaction period
-> * transactions: the list of transactions within the given transaction period
-> * type: the type of transaction, either "sent" or "received"
-> * timestamp: the timestamp of when the transaction occurred
-> * amount: the amount of the transaction
-> * otherparty: the recipient or sender of the transaction amount
 
+Returns JSON with the following fields:
+
+>| Resource       | Type   | Description          |
+>|----------------|--------|----------------------|
+>| startdate | String | The start date of the transaction period, in MM-DD-YYYY format. |
+>| enddate | String | The end date of the transaction period, in MM-DD-YYYY format. |
+>| transactions | Array | The list of transactions within the given transaction period. |
+>| type | String | The type of transaction, either "sent" or "received". |
+>| timestamp | String | The timestamp of when the transaction occurred. | 
+>| amount | Number | The amount of the transaction. |
+>| otherparty | String | The recipient or sender of the transaction amount. |
 **Example Resource:**
 ```json
 {
